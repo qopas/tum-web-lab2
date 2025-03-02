@@ -979,3 +979,130 @@
     color: var(--gray-dark);
     font-size: 0.9rem;
   }
+  @media (max-width: 1100px) {
+    .hero-content h2 {
+      font-size: 3rem;
+    }
+    
+    .featured-slider {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+  
+  @media (max-width: 991px) {
+    nav ul {
+      display: none;
+    }
+    
+    .mobile-toggle {
+      display: flex;
+    }
+    
+    .hero .container {
+      flex-direction: column;
+    }
+    
+    .hero-content {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .hero-content p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-buttons {
+      justify-content: center;
+    }
+    
+    .about-content {
+      flex-direction: column;
+    }
+    
+    .about-image {
+      margin-bottom: 50px;
+    }
+    
+    .contact-content {
+      flex-direction: column;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .footer-links {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    section {
+      padding: 70px 0;
+    }
+    
+    .section-heading h3 {
+      font-size: 1.8rem;
+    }
+    
+    .hero-content h2 {
+      font-size: 2.5rem;
+    }
+    
+    .featured-slider {
+      flex-direction: column;
+    }
+    
+    .featured-card {
+      width: 100%;
+      flex: none;
+    }
+    
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .benefit-card {
+      padding: 20px;
+    }
+    
+    .testimonial-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding: 0 20px;
+    }
+    
+    .section-heading h3 {
+      font-size: 1.6rem;
+    }
+    
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+    
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
