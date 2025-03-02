@@ -1,5 +1,3 @@
-/* Modern styles for TeeWorld T-shirt Business */
-
 /* Base Styles */
 :root {
     --primary: #6d28d9;
@@ -226,4 +224,104 @@
     transition: all 0.3s ease;
   }
   
+
   
+  /* Footer */
+  footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 80px 0 30px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  
+  .footer-logo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, var(--primary-light), var(--secondary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .footer-logo p {
+    color: var(--gray-dark);
+    max-width: 250px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-light), var(--secondary-light));
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: var(--gray-dark);
+    transition: all 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: white;
+    padding-left: 5px;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-bottom p {
+    color: var(--gray-dark);
+    margin: 0;
+  }
+  
+  .legal-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .legal-links a {
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+  }
+  
+  .legal-links a:hover {
+    color: white;
+  }
+  
+  .payment-methods {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .payment-methods span {
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+  }
