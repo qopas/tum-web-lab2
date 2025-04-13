@@ -1264,7 +1264,6 @@
     to { opacity: 1; }
   }
   
-
   @media (max-width: 768px) {
     .mascot-container {
       bottom: 20px;
