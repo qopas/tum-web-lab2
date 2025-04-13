@@ -9,6 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('nav ul');
+        
+        mobileToggle.addEventListener('click', function() {
+          nav.classList.toggle('mobile-menu');
+        });
+      });
+    </script>
     <header>
       <div class="container">
         <div class="logo">
@@ -424,4 +434,5 @@
       </div>
     </footer>
   </body>
+ 
 </html>
