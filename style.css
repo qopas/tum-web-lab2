@@ -1275,3 +1275,29 @@
       height: 80px;
     }
   }
+  .mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    z-index: 990;
+    text-align: center;
+  }
+  
+  .mobile-cta .btn {
+    width: 90%;
+  }
+  
+  @media (max-width: 991px) {
+    .mobile-cta {
+      display: block;
+    }
+    
+    footer {
+      padding-bottom: 80px;
+    }
+  }
