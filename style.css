@@ -1177,3 +1177,36 @@
       text-align: center;
     }
   }
+  .mobile-only {
+    display: none;
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+    color: white;
+    padding: 40px 0;
+  }
+  
+  .mobile-offer {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .discount-badge {
+    background: var(--secondary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+  }
+  
+  /* Show mobile-only section on smaller screens */
+  @media (max-width: 991px) {
+    .mobile-only {
+      display: block;
+    }
+  }
