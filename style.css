@@ -208,7 +208,38 @@
   nav ul li a:hover::after {
     width: 100%;
   }
+  .mobile-only {
+    display: none;
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+    color: white;
+    padding: 40px 0;
+  }
   
+  .mobile-offer {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .discount-badge {
+    background: var(--secondary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+  }
+  
+  @media (max-width: 991px) {
+    .mobile-only {
+      display: block;
+    }
+  }
   .mobile-toggle {
     display: none;
     flex-direction: column;
@@ -321,91 +352,7 @@
     z-index: 1;
   }
   
-  /* Featured Section */
-  .featured {
-    background-color: white;
-  }
-  
-  .featured-slider {
-    display: flex;
-    gap: 30px;
-    margin-top: 50px;
-    overflow-x: auto;
-    padding-bottom: 20px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary) var(--gray);
-  }
-  
-  .featured-slider::-webkit-scrollbar {
-    height: 8px;
-  }
-  
-  .featured-slider::-webkit-scrollbar-track {
-    background: var(--gray);
-    border-radius: 10px;
-  }
-  
-  .featured-slider::-webkit-scrollbar-thumb {
-    background-color: var(--primary);
-    border-radius: 10px;
-  }
-  
-  .featured-card {
-    flex: 0 0 350px;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-  }
-  
-  .featured-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  }
-  
-  .featured-image {
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .featured-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .featured-card:hover .featured-image img {
-    transform: scale(1.05);
-  }
-  
-  .featured-image .badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    color: white;
-    z-index: 2;
-  }
-  
-  .featured-details {
-    padding: 25px;
-    text-align: center;
-  }
-  
-  .featured-details h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-  }
-  
-  .price {
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-  }
+
   
   /* Products Section */
   #products {
@@ -535,77 +482,6 @@
     margin-top: 50px;
   }
   
-  /* Benefits Section */
-  .benefits {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .benefits::before,
-  .benefits::after {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-  }
-  
-  .benefits::before {
-    top: -150px;
-    right: -150px;
-  }
-  
-  .benefits::after {
-    bottom: -150px;
-    left: -150px;
-  }
-  
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    position: relative;
-    z-index: 2;
-  }
-  
-  .benefit-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .benefit-card:hover {
-    transform: translateY(-10px);
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .benefit-icon {
-    width: 70px;
-    height: 70px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: var(--primary);
-  }
-  
-  .benefit-card h4 {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-  }
-  
-  .benefit-card p {
-    opacity: 0.9;
-    font-size: 0.95rem;
-  }
   
   /* About Section */
   #about {

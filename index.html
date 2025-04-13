@@ -7,18 +7,9 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const nav = document.querySelector('nav ul');
-        
-        mobileToggle.addEventListener('click', function() {
-          nav.classList.toggle('mobile-menu');
-        });
-      });
-    </script>
     <header>
       <div class="container">
         <div class="logo">
@@ -74,49 +65,61 @@
         </div>
       </div>
     </section>
-    <section id="featured" class="featured">
-      <div class="container">
-        <div class="section-heading">
-          <h3>Featured Collection</h3>
-          <p>Our latest designs and customer favorites</p>
+  <section id="featured" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h3 class="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+          Featured Collection
+          <span class="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-[70px] h-[3px] bg-gradient-to-r from-purple-600 to-pink-500 rounded-md"></span>
+        </h3>
+        <p class="text-gray-500 max-w-2xl mx-auto mt-6 text-lg">Our latest designs and customer favorites</p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row gap-8 overflow-x-auto py-4 snap-x justify-center">
+        <div class="flex-none w-full md:w-[350px] bg-white rounded-lg shadow-md overflow-hidden transition-all hover:-translate-y-2 hover:shadow-xl snap-center">
+          <div class="relative h-[250px] overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform hover:scale-105" src="https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Limited Edition Tee">
+            <div class="absolute top-4 right-4 py-1 px-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-medium rounded-full">
+              New Arrival
+            </div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-semibold mb-2">Limited Edition Tee</h3>
+            <p class="text-purple-600 font-bold text-lg mb-4">$34.99</p>
+            <a href="#" class="inline-block w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-purple-500 text-white font-medium rounded-full shadow-md hover:from-purple-700 hover:to-purple-600 hover:-translate-y-1 transition-all">Shop Now</a>
+          </div>
         </div>
-        <div class="featured-slider">
-          <div class="featured-card">
-            <div class="featured-image">
-              <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Limited Edition Tee">
-              <div class="badge">New Arrival</div>
-            </div>
-            <div class="featured-details">
-              <h3>Limited Edition Tee</h3>
-              <p class="price">$34.99</p>
-              <a href="#" class="btn primary">Shop Now</a>
+
+        <div class="flex-none w-full md:w-[350px] bg-white rounded-lg shadow-md overflow-hidden transition-all hover:-translate-y-2 hover:shadow-xl snap-center">
+          <div class="relative h-[250px] overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform hover:scale-105" src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Minimal Black Tee">
+            <div class="absolute top-4 right-4 py-1 px-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-medium rounded-full">
+              Bestseller
             </div>
           </div>
-          <div class="featured-card">
-            <div class="featured-image">
-              <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Minimal Black Tee">
-              <div class="badge">Bestseller</div>
-            </div>
-            <div class="featured-details">
-              <h3>Minimal Black Tee</h3>
-              <p class="price">$29.99</p>
-              <a href="#" class="btn primary">Shop Now</a>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-semibold mb-2">Minimal Black Tee</h3>
+            <p class="text-purple-600 font-bold text-lg mb-4">$29.99</p>
+            <a href="#" class="inline-block w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-purple-500 text-white font-medium rounded-full shadow-md hover:from-purple-700 hover:to-purple-600 hover:-translate-y-1 transition-all">Shop Now</a>
+          </div>
+        </div>
+
+        <div class="flex-none w-full md:w-[350px] bg-white rounded-lg shadow-md overflow-hidden transition-all hover:-translate-y-2 hover:shadow-xl snap-center">
+          <div class="relative h-[250px] overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform hover:scale-105" src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Graphic Artist Series">
+            <div class="absolute top-4 right-4 py-1 px-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-medium rounded-full">
+              Limited
             </div>
           </div>
-          <div class="featured-card">
-            <div class="featured-image">
-              <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Graphic Artist Series">
-              <div class="badge">Limited</div>
-            </div>
-            <div class="featured-details">
-              <h3>Graphic Artist Series</h3>
-              <p class="price">$39.99</p>
-              <a href="#" class="btn primary">Shop Now</a>
-            </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-semibold mb-2">Graphic Artist Series</h3>
+            <p class="text-purple-600 font-bold text-lg mb-4">$39.99</p>
+            <a href="#" class="inline-block w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-purple-500 text-white font-medium rounded-full shadow-md hover:from-purple-700 hover:to-purple-600 hover:-translate-y-1 transition-all">Shop Now</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section id="products">
       <div class="container">
@@ -204,40 +207,60 @@
       </div>
     </section>
 
-    <section id="benefits" class="benefits">
-      <div class="container">
-        <div class="section-heading light">
-          <h3>Why Choose Our T-shirts</h3>
-          <p>Quality and comfort in every stitch</p>
+    <section id="benefits" class="py-16 bg-gradient-to-br from-purple-600 to-pink-500 relative overflow-hidden">
+      <div class="absolute top-[-150px] right-[-150px] w-[300px] h-[300px] rounded-full bg-white bg-opacity-5"></div>
+      <div class="absolute bottom-[-150px] left-[-150px] w-[300px] h-[300px] rounded-full bg-white bg-opacity-5"></div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-12">
+          <h3 class="text-4xl font-bold text-white mb-4 relative inline-block">
+            Why Choose Our T-shirts
+            <span class="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-[70px] h-[3px] bg-white bg-opacity-30 rounded-md"></span>
+          </h3>
+          <p class="text-white text-opacity-80 max-w-2xl mx-auto mt-6 text-lg">Quality and comfort in every stitch</p>
         </div>
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl text-center transition-all hover:-translate-y-2 hover:bg-white hover:bg-opacity-20">
+            <div class="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center text-purple-600 mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
             </div>
-            <h4>Premium Materials</h4>
-            <p>100% organic cotton for ultimate comfort and durability.</p>
+            <h4 class="text-xl font-semibold text-white mb-3">Premium Materials</h4>
+            <p class="text-white text-opacity-90">100% organic cotton for ultimate comfort and durability.</p>
           </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl text-center transition-all hover:-translate-y-2 hover:bg-white hover:bg-opacity-20">
+            <div class="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center text-purple-600 mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
             </div>
-            <h4>Quality Guarantee</h4>
-            <p>Every t-shirt is rigorously tested for quality assurance.</p>
+            <h4 class="text-xl font-semibold text-white mb-3">Quality Guarantee</h4>
+            <p class="text-white text-opacity-90">Every t-shirt is rigorously tested for quality assurance.</p>
           </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl text-center transition-all hover:-translate-y-2 hover:bg-white hover:bg-opacity-20">
+            <div class="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center text-purple-600 mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
             </div>
-            <h4>Sustainable</h4>
-            <p>Eco-friendly production methods and sustainable materials.</p>
+            <h4 class="text-xl font-semibold text-white mb-3">Sustainable</h4>
+            <p class="text-white text-opacity-90">Eco-friendly production methods and sustainable materials.</p>
           </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl text-center transition-all hover:-translate-y-2 hover:bg-white hover:bg-opacity-20">
+            <div class="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center text-purple-600 mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
             </div>
-            <h4>Perfect Fit</h4>
-            <p>Designed to fit comfortably for all body types.</p>
+            <h4 class="text-xl font-semibold text-white mb-3">Perfect Fit</h4>
+            <p class="text-white text-opacity-90">Designed to fit comfortably for all body types.</p>
           </div>
         </div>
       </div>
@@ -431,7 +454,6 @@
             </div>
           </div>
         </div>
-        
         <div class="footer-bottom">
           <p>&copy; 2025 TeeWorld. All rights reserved.</p>
           <div class="legal-links">
@@ -447,24 +469,5 @@
         </div>
       </div>
     </footer>
-    <div class="mobile-cta">
-      <a href="#products" class="btn primary">Shop Now</a>
-    </div>
-    <div class="mascot-container">
-      <div class="mascot">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="120" height="120">
-          <path d="M20,25 L35,10 L65,10 L80,25 L70,35 L65,20 L35,20 L30,35 L20,25 Z" fill="#8b5cf6" />
-          <path d="M30,35 L30,90 L70,90 L70,35 L65,20 L35,20 L30,35 Z" fill="#8b5cf6" />
-          <circle cx="50" cy="50" r="5" fill="white" />
-          <circle cx="40" cy="45" r="3" fill="white" />
-          <circle cx="60" cy="45" r="3" fill="white" />
-          <path d="M40,60 Q50,70 60,60" fill="none" stroke="white" stroke-width="2" />
-        </svg>
-        <div class="mascot-message">
-          <p>Hi there! 👋 Welcome to TeeWorld! Check out our premium collection!</p>
-        </div>
-      </div>
-    </div>
   </body>
- 
 </html>
