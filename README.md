@@ -1,31 +1,6 @@
-# Lab 2 - Landing page
+# Lab 3 - Responsive Design & Animations
 
-Create a web page for your/friends/relatives business (example: car-rent, cookies-shop, crypto-scam)
-
-## Customer requirements
-
-- Some form of navigation to sections (links, buttons)
-- Call to action
-- At least 4 sections ([see examples](https://webflow.com/blog/high-converting-landing-page))
-- Pleasant to the eyes
-
-## Dev requirements
-
-- Use vanilla CSS and HTML (no frameworks)
-- Have a decent git history (no one commit)
-- The page should be deployed on a free hosting service (example: GitHub Pages, Vercel, Netlify)
-- Project repo should have a README with a short description of the landing page topic, screenshots, and a link to the live demo
-
-## Other requirements:
-
-- For potential maximal mark, a WIP version should be submitted during the class
-- Use index.html, reset.css
-
-# TeeWorld - Modern T-shirt Business Landing Page
-
-![TeeWorld Preview](screenshots/hero-section.jpg)
-
-A modern, responsive landing page for a t-shirt business with multiple sections, product displays, and interactive elements.
+This project builds upon the TeeWorld landing page from Lab 2, enhancing it with responsive design features and interactive animated elements.
 
 ## Live Demo
 
@@ -33,91 +8,138 @@ A modern, responsive landing page for a t-shirt business with multiple sections,
 
 ## Project Overview
 
-TeeWorld is a sleek, modern landing page for a t-shirt business that showcases products in an engaging way. The site features a clean design with gradients, subtle animations, and a fully responsive layout that works across all devices.
+For Lab 3, TeeWorld's landing page has been improved with mobile responsiveness and an animated mascot to enhance user experience across all devices. The project meets all customer and developer requirements while maintaining the clean, modern aesthetic established in Lab 2.
 
-### Screenshots
+![TeeWorld Mobile Preview](screenshots/mobile-view.jpg)
 
-![Hero Section](screenshots/hero-section.jpg)
-![Featured Collection](screenshots/featured-section.jpg)
-![Products Grid](screenshots/products-section.jpg)
-![Testimonials](screenshots/testimonials-section.jpg)
+## Improvements from Lab 2
 
-## Features
+### Responsive Design
 
-- **Modern UI Design** - Clean, contemporary aesthetic with gradient accents
-- **Fully Responsive** - Optimized for mobile, tablet, and desktop devices
-- **Multiple Sections** - Hero, Featured Collection, Products, Benefits, About, Testimonials, Newsletter, and Contact
-- **Interactive Elements** - Hover effects, smooth scrolling, and product action buttons
-- **Product Showcase** - Dedicated product grid with filtering options
-- **Testimonials** - Customer feedback section with featured review highlight
-- **Contact Form** - Styled form with validation
-- **Newsletter Signup** - Email subscription section
-- **Mobile-Friendly Navigation** - Collapsible menu for smaller screens
+- **Mobile-Optimized Layout**: Restructured content to display properly on mobile devices
+- **Flexible Sizing**: Ensured all elements adjust appropriately for different screen sizes
+- **Mobile Navigation**: Implemented a hamburger menu toggle for smaller screens
+- **Persistent Call-to-Action**: Added a fixed CTA button that remains visible when scrolling on mobile
+- **Touch-Friendly Elements**: Increased button sizes and spacing for better touch interaction
+
+### Mobile-Only Elements
+
+- **Exclusive Mobile Offer Section**: Added a special promotional section that only displays on mobile devices
+- **Mobile Discount Badge**: Created a prominent discount offer visible only to mobile users
+- **Mobile-Specific Navigation Menu**: Designed a slide-in navigation that's optimized for mobile interaction
+
+### Interactive Mascot
+
+- **Friendly T-shirt Character**: Designed a custom SVG mascot related to the business theme
+- **Delayed Appearance**: The mascot appears 3 seconds after page load
+- **Animation**: Implemented a bouncing animation that makes the mascot feel lively
+- **Interactive Message**: Added a tooltip that appears when hovering over the mascot
+- **Strategic Placement**: Positioned the mascot in the corner of the screen to avoid interfering with content
+
+## Screenshots
+
+### Responsive Design
+
+![Tablet View](screenshots/tablet-view.jpg)
+![Mobile View](screenshots/mobile-view.jpg)
+
+### Mobile-Only Elements
+
+![Mobile Exclusive Offer](screenshots/mobile-exclusive.jpg)
+![Mobile Navigation](screenshots/mobile-nav.jpg)
+![Mobile CTA](screenshots/mobile-cta.jpg)
+
+### Mascot
+
+![T-shirt Mascot](screenshots/mascot.jpg)
+![Mascot Interaction](screenshots/mascot-interaction.jpg)
+
+## Implementation Details
+
+### Responsive Design Approach
+
+The responsive design was implemented using:
+- CSS media queries to target different screen sizes
+- Flexbox and CSS Grid for flexible layouts
+- Relative units (%, em, rem) instead of fixed pixel sizes
+- Mobile-first approach for CSS organization
+
+### Key Breakpoints
+
+- Mobile: Up to 576px
+- Tablet: 577px to 991px
+- Desktop: 992px and above
+
+### Mascot Implementation
+
+The mascot was created using:
+- Custom SVG code for lightweight, scalable graphics
+- CSS animations for the bouncing effect
+- CSS transitions for smooth hover interactions
+
+## Code Snippets
+
+### Responsive Media Query Example
+
+```css
+@media (max-width: 576px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+}
+```
+
+### Mascot Animation
+
+```css
+.mascot {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+```
 
 ## Technologies Used
 
 - HTML5
-- CSS3 (Vanilla CSS, no frameworks)
-- Modern CSS features:
-  - CSS Variables
-  - Flexbox
-  - CSS Grid
-  - Gradients
-  - Transitions & Animations
-- Google Fonts
-- Reset CSS
-
-## Project Structure
-
-```
-/
-├── index.html          # Main HTML structure
-├── reset.css           # CSS reset
-├── style.css           # Custom styles
-├── screenshots/        # Project screenshots
-│   ├── hero-section.png
-│   ├── featured-section.png
-│   ├── products-section.png
-│   └── testimonials-section.png
-└── README.md           # Project documentation
-```
-
+- CSS3 (Vanilla - no frameworks)
 ## Development Process
 
-The project was developed using a structured approach:
+1. **Analysis of Lab 2 Website**
+   - Identified responsive design issues
+   - Planned mobile-optimized layout changes
 
-1. **Planning & Design Phase**
-   - Defined sections and layout
-   - Selected color scheme and typography
+2. **Responsive Implementation**
+   - Added media queries for breakpoints
+   - Restructured layout for mobile devices
+   - Created mobile-only elements
 
-2. **HTML Structure**
-   - Created semantic HTML markup
-   - Organized sections and content structure
+3. **Mascot Design & Implementation**
+   - Designed SVG mascot to match brand style
+   - Implemented animations and interactions
+   - Added delayed appearance logic
 
-3. **CSS Styling**
-   - Implemented base styles and CSS variables
-   - Styled individual sections
-   - Added hover effects and transitions
-   - Built responsive layouts
+4. **Testing & Refinement**
+   - Tested across multiple device sizes
+   - Refined animations for performance
+   - Ensured all customer requirements were met
 
-4. **Responsive Design**
-   - Implemented mobile-first approach
-   - Added media queries for different screen sizes
+## How to Run Locally
 
-## Deployment
+1. Clone the repository
+   ```
+   git clone https://github.com/qopas/tum-web-lab3.git
+   ```
 
-The website is deployed using GitHub Pages:
-
-1. Project repository was created on GitHub
-2. Main branch was configured as the source for GitHub Pages
-3. Site is automatically updated when changes are pushed to the main branch
-
-## Credits
-
-- Images sourced from [Unsplash](https://unsplash.com/)
-- Icons from [Feather Icons](https://feathericons.com/)
-- Fonts from [Google Fonts](https://fonts.google.com/)
-
-## License
-
-This project is available under the MIT License - see the LICENSE file for details.
+2. Open the project folder and launch index.html in your browser
